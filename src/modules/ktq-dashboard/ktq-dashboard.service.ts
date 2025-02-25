@@ -1,26 +1,36 @@
 import { Injectable } from '@nestjs/common';
 import { CreateKtqDashboardDto } from './dto/create-ktq-dashboard.dto';
 import { UpdateKtqDashboardDto } from './dto/update-ktq-dashboard.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import KtqPost from '../ktq-posts/entities/ktq-post.entity';
+import { Between, Repository } from 'typeorm';
+import KtqResponse from '@/system/response/ktq-response';
+import { KtqLike } from '../ktq-posts/entities/ktq-like.entity';
+import { KtqHistory } from '../ktq-posts/entities/ktq-history.entity';
 
 @Injectable()
 export class KtqDashboardService {
-  create(createKtqDashboardDto: CreateKtqDashboardDto) {
-    return 'This action adds a new ktqDashboard';
-  }
+  constructor(
+    @InjectRepository(KtqPost)
+    readonly ktqPostsRepo: Repository<KtqPost>,
+    @InjectRepository(KtqLike)
+    readonly ktqLikesRepo: Repository<KtqLike>,
+    @InjectRepository(KtqHistory)
+    readonly ktqHistoriesRepo: Repository<KtqHistory>,
+  ) {}
 
-  findAll() {
-    return `This action returns all ktqDashboard`;
-  }
+  async index() {
+    const posts_count = (await this.ktqPostsRepo.count()) || 0;
 
-  findOne(id: number) {
-    return `This action returns a #${id} ktqDashboard`;
-  }
+    const like_count =
+      (await this.ktqLikesRepo.count({ where: { action: 'like' } })) || 0;
 
-  update(id: number, updateKtqDashboardDto: UpdateKtqDashboardDto) {
-    return `This action updates a #${id} ktqDashboard`;
-  }
+    const histories_count = (await this.ktqHistoriesRepo.count()) || 0;
 
-  remove(id: number) {
-    return `This action removes a #${id} ktqDashboard`;
+    return KtqResponse.toResponse({
+      posts_count,
+      like_count,
+      histories_count,
+    });
   }
 }

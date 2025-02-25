@@ -3,6 +3,7 @@ import { Paginate, PaginateQuery } from 'nestjs-paginate';
 import { KtqPostsService } from '../services/ktq-posts.service';
 import { Throttle } from '@nestjs/throttler';
 import KtqPost from '../entities/ktq-post.entity';
+import { RealIp } from 'nestjs-real-ip';
 
 @Controller('client/posts')
 export class KtqClientPostsController {
@@ -17,7 +18,7 @@ export class KtqClientPostsController {
   @Get(':slug')
   async getBySlug(
     @Param('slug') slug: KtqPost['slug'],
-    @Ip() ip_client: string,
+    @RealIp() ip_client: string,
   ) {
     return await this.ktqPostsService.getBySlug(slug, ip_client);
   }

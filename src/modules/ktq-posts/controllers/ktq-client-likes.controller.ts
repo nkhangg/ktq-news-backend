@@ -3,6 +3,7 @@ import { Throttle } from '@nestjs/throttler';
 import ToggleLikeDto from '../dto/toggle-like.dto';
 import KtqPost from '../entities/ktq-post.entity';
 import { KtqLikesService } from '../services/ktq-likes.service';
+import { RealIp } from 'nestjs-real-ip';
 
 @Controller('client/likes')
 export class KtqClientLikesController {
@@ -12,7 +13,7 @@ export class KtqClientLikesController {
   @Throttle({
     default: { limit: 1, ttl: 5 * 1000 },
   })
-  async toggleLike(@Body() data: ToggleLikeDto, @Ip() ipClient: string) {
+  async toggleLike(@Body() data: ToggleLikeDto, @RealIp() ipClient: string) {
     return await this.ktqLikesService.toggleLike(data.post_id, ipClient);
   }
 
