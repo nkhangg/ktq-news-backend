@@ -134,4 +134,17 @@ export class KtqConfigsService {
 
     return result;
   }
+
+  async getStaticSlidersData() {
+    const result = await this.ktqConfigRepo.findOne({
+      where: { key_name: Constant.SLIDERS_DATA },
+    });
+
+    if (!result)
+      throw new NotFoundException(
+        KtqResponse.toResponse(null, { status_code: HttpStatus.NOT_FOUND }),
+      );
+
+    return KtqResponse.toResponse(result);
+  }
 }

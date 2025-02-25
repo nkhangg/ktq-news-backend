@@ -101,7 +101,7 @@ export class KtqPostsService {
   async getMetadata(slug: KtqPost['slug']) {
     const post = await this.ktqPostRepo.findOne({
       where: { slug },
-      select: ['title'],
+      select: ['title', 'preview_content'],
     });
 
     if (!post)

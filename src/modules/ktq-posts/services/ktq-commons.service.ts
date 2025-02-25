@@ -7,6 +7,7 @@ import KtqPost from '../entities/ktq-post.entity';
 import { KtqViewCommonSliders } from '../entities/views/ktq-view-common-sliders.entity';
 import KtqResponse from '@/system/response/ktq-response';
 import { KtqViewCommonCategoriesTopic } from '../entities/views/ktq-view-categories-topic.entity';
+import { KtqConfigsService } from '@/modules/ktq-configs/ktq-configs.service';
 
 @Injectable()
 export class KtqCommonsService {

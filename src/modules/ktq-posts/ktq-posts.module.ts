@@ -29,6 +29,7 @@ import { KtqPostsService } from './services/ktq-posts.service';
 import { KtqSearchHistoriesService } from './services/ktq-search-histories.service';
 import { KtqTagsService } from './services/ktq-tags.service';
 import { KtqHistoriesController } from './controllers/ktq-histories.controller';
+import { KtqConfigsModule } from '../ktq-configs/ktq-configs.module';
 
 @Module({
   imports: [
@@ -42,6 +43,7 @@ import { KtqHistoriesController } from './controllers/ktq-histories.controller';
       KtqViewCommonCategoriesTopic,
       KtqHistory,
     ]),
+    KtqConfigsModule,
   ],
   controllers: [
     KtqPostsController,

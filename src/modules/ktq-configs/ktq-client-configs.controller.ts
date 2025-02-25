@@ -14,4 +14,9 @@ export class KtqClientConfigsController {
   async contactData() {
     return await this.ktqConfigsService.contactData();
   }
+
+  @Get('static-sliders-data')
+  async staticSlidersData() {
+    return await this.ktqConfigsService.getStaticSlidersData();
+  }
 }

@@ -13,6 +13,7 @@ import { KtqPostsModule } from './modules/ktq-posts/ktq-posts.module';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 import { KtqFeedbackModule } from './modules/ktq-feedback/ktq-feedback.module';
+import { KtqDashboardModule } from './modules/ktq-dashboard/ktq-dashboard.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { KtqFeedbackModule } from './modules/ktq-feedback/ktq-feedback.module';
     KtqMediasModule,
     KtqPostsModule,
     KtqFeedbackModule,
+    KtqDashboardModule,
   ],
   controllers: [],
   providers: [],
