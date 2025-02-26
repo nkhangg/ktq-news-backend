@@ -18,7 +18,7 @@ export class KtqHistory extends Timestamp {
   @Column({ type: 'varchar', length: 255 })
   ip_client: string;
 
-  @ManyToOne(() => KtqPost, (post) => post.histories)
+  @ManyToOne(() => KtqPost, (post) => post.histories, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'post' })
   post: KtqPost;
 }
