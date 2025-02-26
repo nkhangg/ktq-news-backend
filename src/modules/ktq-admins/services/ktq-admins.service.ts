@@ -213,7 +213,7 @@ export class KtqAdminsService {
       }
 
       if (data.fullname) {
-        admin.fullname = admin.fullname;
+        admin.fullname = data.fullname;
       }
 
       await this.ktqAdminRepo.save(admin);
