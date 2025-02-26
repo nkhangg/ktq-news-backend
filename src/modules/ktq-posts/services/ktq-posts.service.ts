@@ -5,6 +5,7 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
+import { EventEmitter2 } from '@nestjs/event-emitter';
 import { InjectRepository } from '@nestjs/typeorm';
 import { plainToClass } from 'class-transformer';
 import { Request } from 'express';
@@ -20,9 +21,9 @@ import CreatePostDto from '../dto/create-post.dto';
 import UpdatePostDto from '../dto/update-post';
 import KtqCategory from '../entities/ktq-category.entity';
 import KtqPost from '../entities/ktq-post.entity';
-import { EventEmitter2 } from '@nestjs/event-emitter';
 import { EventConstant } from '../events/event.constant';
 import WatchPostEvent from '../events/interfaces/watch-post.event';
+import { isNumeric } from '../ultils';
 
 @Injectable()
 export class KtqPostsService {
@@ -34,7 +35,7 @@ export class KtqPostsService {
     private eventEmitter: EventEmitter2,
   ) {}
 
-  async index(query: PaginateQuery, client_mode = false) {
+  async index(query: PaginateQuery & { ignore?: string }, client_mode = false) {
     const filterableColumns: {
       [key in Column<KtqPost> | (string & {})]?:
         | (FilterOperator | FilterSuffix)[]
@@ -72,6 +73,10 @@ export class KtqPostsService {
         tags: true,
         category: true,
       },
+      where:
+        query.ignore && isNumeric(query.ignore)
+          ? { id: Not(Number(query.ignore)) }
+          : undefined,
     });
 
     if (client_mode) {

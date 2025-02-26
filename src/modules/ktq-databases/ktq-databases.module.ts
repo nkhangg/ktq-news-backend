@@ -16,7 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         database: configService.get<string>('DB_NAME'),
         charset: 'utf8mb4_unicode_ci',
         entities: ['dist/**/*.entity{.ts,.js}'],
-        synchronize: true,
+        synchronize: configService.get<string>('TZ') !== 'production',
       }),
     }),
   ],
