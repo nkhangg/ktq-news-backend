@@ -14,9 +14,7 @@ export class KtqSearchHistory extends Timestamp {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => KtqPost, (post) => post.searchHistories, {
-    onDelete: 'CASCADE',
-  })
+  @ManyToOne(() => KtqPost, (post) => post.searchHistories)
   post: KtqPost;
 
   @Column({ type: 'int', default: 1 })

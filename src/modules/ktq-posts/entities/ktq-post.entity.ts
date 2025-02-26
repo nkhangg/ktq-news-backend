@@ -59,12 +59,17 @@ export default class KtqPost extends Timestamp {
   @Column({ type: 'int', default: 0 })
   like_count: number;
 
-  @OneToMany(() => KtqSearchHistory, (searchHistory) => searchHistory.post)
+  @OneToMany(() => KtqSearchHistory, (searchHistory) => searchHistory.post, {
+    cascade: true,
+  })
   searchHistories: KtqSearchHistory[];
 
-  @OneToMany(() => KtqLike, (like) => like.post)
+  @OneToMany(() => KtqLike, (like) => like.post, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
   likes: KtqLike[];
 
-  @OneToMany(() => KtqHistory, (like) => like.post)
+  @OneToMany(() => KtqHistory, (history) => history.post, { cascade: true })
   histories: KtqHistory[];
 }

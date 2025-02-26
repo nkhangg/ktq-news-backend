@@ -19,9 +19,7 @@ export class KtqLike extends Timestamp {
   @Column({ type: 'varchar', length: 255 })
   ip_client: string;
 
-  @ManyToOne(() => KtqPost, (post) => post.likes, {
-    cascade: ['update', 'remove'],
-  })
+  @ManyToOne(() => KtqPost, (post) => post.likes, { onDelete: 'CASCADE' })
   post: KtqPost;
 
   @Column({ type: 'varchar', length: 50 })
