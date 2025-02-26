@@ -1,14 +1,5 @@
-import { Type } from 'class-transformer';
-import {
-  IsArray,
-  IsEmail,
-  IsNumber,
-  IsOptional,
-  IsString,
-  ValidateNested,
-} from 'class-validator';
+import { IsArray, IsEmail, IsOptional, IsString } from 'class-validator';
 import { PermissionDto } from './permission.dto';
-import { HasExisted } from '@/system/validators/decorators/has-existed';
 
 export class UpdateDto {
   @IsString()

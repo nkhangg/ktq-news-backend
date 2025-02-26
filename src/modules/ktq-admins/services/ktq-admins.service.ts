@@ -212,6 +212,10 @@ export class KtqAdminsService {
         admin.permissions = permissionsData;
       }
 
+      if (data.fullname) {
+        admin.fullname = admin.fullname;
+      }
+
       await this.ktqAdminRepo.save(admin);
 
       return KtqResponse.toResponse(true, { message: 'Update success !' });

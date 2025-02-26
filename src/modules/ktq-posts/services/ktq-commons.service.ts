@@ -40,6 +40,9 @@ export class KtqCommonsService {
         admin: true,
         category: true,
       },
+      select: {
+        admin: { fullname: true },
+      },
     });
 
     return KtqResponse.toResponse(result);
@@ -54,6 +57,9 @@ export class KtqCommonsService {
       relations: {
         admin: true,
         category: true,
+      },
+      select: {
+        admin: { fullname: true },
       },
     });
 

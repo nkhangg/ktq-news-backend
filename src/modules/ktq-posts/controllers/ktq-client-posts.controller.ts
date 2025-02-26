@@ -12,7 +12,7 @@ export class KtqClientPostsController {
   @Get()
   @Throttle({ default: { limit: 30, ttl: 60 * 1000 } })
   async index(@Paginate() query: PaginateQuery) {
-    return await this.ktqPostsService.index(query);
+    return await this.ktqPostsService.index(query, true);
   }
 
   @Get(':slug')

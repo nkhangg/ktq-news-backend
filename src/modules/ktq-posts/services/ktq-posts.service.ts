@@ -34,7 +34,7 @@ export class KtqPostsService {
     private eventEmitter: EventEmitter2,
   ) {}
 
-  async index(query: PaginateQuery) {
+  async index(query: PaginateQuery, client_mode = false) {
     const filterableColumns: {
       [key in Column<KtqPost> | (string & {})]?:
         | (FilterOperator | FilterSuffix)[]
@@ -73,6 +73,19 @@ export class KtqPostsService {
         category: true,
       },
     });
+
+    if (client_mode) {
+      const newData = data.data.map((item) => {
+        return {
+          ...item,
+          admin: { fullname: item.admin.fullname || null },
+        };
+      });
+
+      data.data = newData as KtqPost[];
+
+      return KtqResponse.toPagination<KtqPost>(data, true, KtqPost);
+    }
 
     return KtqResponse.toPagination<KtqPost>(data, true, KtqPost);
   }
@@ -122,6 +135,11 @@ export class KtqPostsService {
         admin: true,
         category: true,
         tags: true,
+      },
+      select: {
+        admin: {
+          fullname: true,
+        },
       },
     });
 
