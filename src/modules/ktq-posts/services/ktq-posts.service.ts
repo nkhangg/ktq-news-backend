@@ -95,6 +95,49 @@ export class KtqPostsService {
     return KtqResponse.toPagination<KtqPost>(data, true, KtqPost);
   }
 
+  async sitemaps(query: PaginateQuery) {
+    const filterableColumns: {
+      [key in Column<KtqPost> | (string & {})]?:
+        | (FilterOperator | FilterSuffix)[]
+        | true;
+    } = {
+      id: true,
+      title: [FilterOperator.ILIKE],
+      like_count: true,
+      ttr: [FilterOperator.GT, FilterOperator.LTE],
+      content: [FilterOperator.ILIKE],
+      path: true,
+      'category.slug': true,
+      'tags.slug': true,
+    };
+
+    query.filter = KtqResponse.processFilters(query.filter, filterableColumns);
+
+    const data = await paginate(query, this.ktqPostRepo, {
+      sortableColumns: [
+        'id',
+        'title',
+        'content',
+        'preview_content',
+        'like_count',
+        'created_at',
+        'updated_at',
+      ],
+      searchableColumns: ['id', 'title', 'slug', 'preview_content', 'content'],
+      defaultLimit: 100,
+      filterableColumns,
+      defaultSortBy: [['id', 'DESC']],
+      maxLimit: 100,
+      relations: {
+        category: true,
+      },
+
+      select: ['id', 'slug', 'category.slug'],
+    });
+
+    return KtqResponse.toPagination<KtqPost>(data, true, KtqPost);
+  }
+
   async getById(id: KtqPost['id']) {
     const post = await this.ktqPostRepo.findOne({
       where: { id },

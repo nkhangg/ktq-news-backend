@@ -18,6 +18,12 @@ export class KtqClientPostsController {
     return await this.ktqPostsService.index({ ...query, ignore }, true);
   }
 
+  @Get('sitemaps')
+  @Throttle({ default: { limit: 5, ttl: 60 * 1000 } })
+  async sitemaps(@Paginate() query: PaginateQuery) {
+    return await this.ktqPostsService.sitemaps({ ...query });
+  }
+
   @Get(':slug')
   async getBySlug(
     @Param('slug') slug: KtqPost['slug'],
