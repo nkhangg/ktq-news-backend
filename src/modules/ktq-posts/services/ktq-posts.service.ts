@@ -132,7 +132,7 @@ export class KtqPostsService {
         category: true,
       },
 
-      select: ['id', 'slug', 'category.slug'],
+      select: ['id', 'slug', 'category.slug', 'updated_at'],
     });
 
     return KtqResponse.toPagination<KtqPost>(data, true, KtqPost);
