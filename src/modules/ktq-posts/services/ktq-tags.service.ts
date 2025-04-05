@@ -16,6 +16,7 @@ import {
 import { Column } from 'nestjs-paginate/lib/helper';
 import { In, Not, Repository } from 'typeorm';
 import KtqTag from '../entities/ktq-tag.entity';
+import { SystemLang } from '@/system/lang/system.lang';
 
 @Injectable()
 export class KtqTagsService {
@@ -56,7 +57,9 @@ export class KtqTagsService {
 
     if (!category)
       throw new BadRequestException(
-        KtqResponse.toResponse(false, { message: "Can't create tag" }),
+        KtqResponse.toResponse(false, {
+          message: SystemLang.getText('messages', 'create_failed', 'tag'),
+        }),
       );
 
     return KtqResponse.toResponse(true);
@@ -68,7 +71,7 @@ export class KtqTagsService {
     if (!tag)
       throw new NotFoundException(
         KtqResponse.toResponse(false, {
-          message: 'Tag not found',
+          message: SystemLang.getText('messages', 'not_found'),
           status_code: HttpStatus.NOT_FOUND,
         }),
       );
@@ -80,7 +83,9 @@ export class KtqTagsService {
 
       if (duplicateSlug) {
         throw new BadGatewayException(
-          KtqResponse.toResponse(false, { message: 'Slug is already exists' }),
+          KtqResponse.toResponse(false, {
+            message: SystemLang.getText('messages', 'already_exists', 'Slug'),
+          }),
         );
       }
     }
@@ -89,7 +94,9 @@ export class KtqTagsService {
 
     if (!result.affected)
       throw new BadRequestException(
-        KtqResponse.toResponse(false, { message: "Can't update tag" }),
+        KtqResponse.toResponse(false, {
+          message: SystemLang.getText('messages', 'update_failed', 'tag'),
+        }),
       );
 
     return KtqResponse.toResponse(true);
@@ -100,10 +107,14 @@ export class KtqTagsService {
 
     if (!result.affected)
       throw new BadRequestException(
-        KtqResponse.toResponse(false, { message: "Can't delete tag" }),
+        KtqResponse.toResponse(false, {
+          message: SystemLang.getText('messages', 'can_not_delete', 'tag'),
+        }),
       );
 
-    return KtqResponse.toResponse(true, { message: 'Delete success !' });
+    return KtqResponse.toResponse(true, {
+      message: SystemLang.getText('messages', 'delete_success'),
+    });
   }
 
   async deletes(ids: KtqTag['id'][]) {
@@ -111,9 +122,13 @@ export class KtqTagsService {
 
     if (!result.affected)
       throw new BadRequestException(
-        KtqResponse.toResponse(false, { message: "Can't delete tag" }),
+        KtqResponse.toResponse(false, {
+          message: SystemLang.getText('messages', 'can_not_delete', 'tag'),
+        }),
       );
 
-    return KtqResponse.toResponse(true, { message: 'Delete success !' });
+    return KtqResponse.toResponse(true, {
+      message: SystemLang.getText('messages', 'default_action'),
+    });
   }
 }

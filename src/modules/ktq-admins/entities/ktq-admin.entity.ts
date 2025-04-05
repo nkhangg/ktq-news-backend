@@ -31,7 +31,10 @@ export default class KtqAdmin extends Timestamp {
   @Column({ type: 'boolean', default: false })
   is_system_account: boolean;
 
-  @ManyToMany(() => KtqPermission, (permission) => permission.admins)
+  @ManyToMany(() => KtqPermission, (permission) => permission.admins, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
   permissions: KtqPermission[];
 
   @OneToMany(() => KtqPost, (post) => post.admin)

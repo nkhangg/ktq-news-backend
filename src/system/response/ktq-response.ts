@@ -2,6 +2,7 @@ import { HttpStatus } from '@nestjs/common';
 import { plainToClass } from 'class-transformer';
 import { FilterOperator, FilterSuffix, Paginated } from 'nestjs-paginate';
 import { Column } from 'nestjs-paginate/lib/helper';
+import { SystemLang } from '../lang/system.lang';
 
 export default class KtqResponse {
   public static toResponse(
@@ -11,7 +12,9 @@ export default class KtqResponse {
     return {
       message:
         options?.message ||
-        (!Boolean(data) ? `This action cannot be performed` : 'Success'),
+        (!Boolean(data)
+          ? SystemLang.getText('messages', 'default_action')
+          : SystemLang.getText('messages', 'success')),
       status_code:
         options?.status_code || (!Boolean(data) ? HttpStatus.BAD_REQUEST : 200),
       data: data,
