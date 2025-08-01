@@ -1,73 +1,24 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+## 📝 Project Overview
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This website is a full-featured content platform that supports:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- 🗂️ **Post Management**: Create, edit, and delete posts with ease.
+- 🏷️ **Category-Based Organization**: Posts are organized into categories for better navigation and content discovery.
+- 🔍 **Search Functionality**: Quickly find content using keyword-based search.
+- 📈 **Popular Posts Display**: Highlights trending articles to increase user engagement.
+- 💼 **Affiliate Marketing Integration**: Seamless support for monetization through affiliate links.
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## ⚙️ Tech Stack
 
-## Installation
+- **Frontend:** [Next.js](https://nextjs.org/) — Fast, SEO-friendly React framework with built-in routing and SSR.
+- **Backend:** [NestJS](https://nestjs.com/) — A scalable Node.js framework for building efficient server-side applications.
+- **Database:** MySQL — Relational database for structured content management.
 
-```bash
-$ npm install
-```
+This combination ensures **high performance**, **scalability**, and a clean codebase for long-term maintenance. 🚀
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+![Biểu đồ dữ liệu](https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/1568f09cb922297d402876240c611e0e?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQD%2BlrmLFyYxdgJB2z68gMjvJifEbdHIhzPMrIiIIm6BBQIgUlRSJYYHrE3zZuqRR4Qlaf68yhLzL1ueIj1qC2SJTRUqmQUI8P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3Mzk5MzkxNzM4MTkiDFQY4KdXoVSccGe1PCrtBADSsDd3N1RS3quRubgT58k5mHyOl2bY0%2Bc1VLYa3lnvujPteJ61rzVgA1%2FTamv%2F%2FRrzlNNdp3QUbI0hVteGSWfxeXKyDEnvOjFEbgecULsSKxiuIuhjLtYzBILhJC1ikxW8%2B1Bnnrzj2%2BwuW%2F5fmYrNmvfiqbylwnQ%2B9t1pnZO5HnW6FTiFYpvqqtzjP5FRVOcNdQqO8taNWE82qYY5FNcXZxQMN9u0nKL3tnmfAHhEXpoUApw%2FMrORj6cS7iQw4%2FElUeaKuBZ8yi%2B4DsNlkqYHwFGZnp50V0MC2%2B6PHcLq3vVH5dFsxi8VcBDTvxjjK9ud9fa3jpUCfu%2F0kQaNYBM%2BKtUsL0YDc9eAVuheuJWddFNhVRZ%2BJd2xKIQ4%2BeW7IWDhfvwz0Oy9jaQ%2BUcLvhrWqC%2BcjW6dH%2Bv66Sp6uz0O34J%2B9a1MHgeZgRsay%2BOx8OR%2Bu9WZADTcn%2Fgl11enOX7yt8jT79aIXge9i%2B4gZn6llZFa6CDoylDZCrkmyvnwBant%2Fkg0Y1GLeIY43Yui%2FNVQCjOP%2BDgvz6o3zxxfWJ538oJhVXLcTdIKvUnP6AH%2B1H3iXxSWx%2Bt%2BvR38aHu0Tm8oHAH3MVpUKZ8AkhDcFaTEtWmYc7QVrXZCnIRNXZcIvaIlNTrPCv5AYD5%2F4rF4qBwazMkZHL4wDOEOsYUBdbRdtoxjP5lRBUmvleEJKcM5BxdxHRI%2FAHPrvaeJDZp%2FWbLGE4dStXBp3lEl%2FYf%2FJGcinbAOM%2BfMqq2DVyqdsAmtXNJH42l26WMI1i8sZ8%2FV%2Fy8IxZFwQn%2BWtB8QjC9QkVgTQjrhNkgQThddU9aQG%2FDDVn7PEBjqbAeLKtkgX6uIyBFStQHVv1K1xSGIEmB7zB7LiQU%2FO5bNhkSnakrF63BX%2F%2B1MlEwiyibxQstMvQneKo8k5Zen8WLIKY%2By7BHkTXG3BVzURQM2ZndJpnLjBorF%2FVmVYOTCeovfkCsx6ouElB0toGzYpWVDeDKOcckkcUW7vGLUU2%2BeM8l3SflPnfQPao941aXpgfcVn2NZ5iXnwP3sF&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250801T145815Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW54JSM3ULQ%2F20250801%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=736364071f688926f1a5b0e775d141e8da6ebe2123ab2648915228e5a28fe869 "Biểu đồ minh hoạ")
+![Biểu đồ dữ liệu](https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/fe7f9afdf188f0f435306085d8640544?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQD%2BlrmLFyYxdgJB2z68gMjvJifEbdHIhzPMrIiIIm6BBQIgUlRSJYYHrE3zZuqRR4Qlaf68yhLzL1ueIj1qC2SJTRUqmQUI8P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3Mzk5MzkxNzM4MTkiDFQY4KdXoVSccGe1PCrtBADSsDd3N1RS3quRubgT58k5mHyOl2bY0%2Bc1VLYa3lnvujPteJ61rzVgA1%2FTamv%2F%2FRrzlNNdp3QUbI0hVteGSWfxeXKyDEnvOjFEbgecULsSKxiuIuhjLtYzBILhJC1ikxW8%2B1Bnnrzj2%2BwuW%2F5fmYrNmvfiqbylwnQ%2B9t1pnZO5HnW6FTiFYpvqqtzjP5FRVOcNdQqO8taNWE82qYY5FNcXZxQMN9u0nKL3tnmfAHhEXpoUApw%2FMrORj6cS7iQw4%2FElUeaKuBZ8yi%2B4DsNlkqYHwFGZnp50V0MC2%2B6PHcLq3vVH5dFsxi8VcBDTvxjjK9ud9fa3jpUCfu%2F0kQaNYBM%2BKtUsL0YDc9eAVuheuJWddFNhVRZ%2BJd2xKIQ4%2BeW7IWDhfvwz0Oy9jaQ%2BUcLvhrWqC%2BcjW6dH%2Bv66Sp6uz0O34J%2B9a1MHgeZgRsay%2BOx8OR%2Bu9WZADTcn%2Fgl11enOX7yt8jT79aIXge9i%2B4gZn6llZFa6CDoylDZCrkmyvnwBant%2Fkg0Y1GLeIY43Yui%2FNVQCjOP%2BDgvz6o3zxxfWJ538oJhVXLcTdIKvUnP6AH%2B1H3iXxSWx%2Bt%2BvR38aHu0Tm8oHAH3MVpUKZ8AkhDcFaTEtWmYc7QVrXZCnIRNXZcIvaIlNTrPCv5AYD5%2F4rF4qBwazMkZHL4wDOEOsYUBdbRdtoxjP5lRBUmvleEJKcM5BxdxHRI%2FAHPrvaeJDZp%2FWbLGE4dStXBp3lEl%2FYf%2FJGcinbAOM%2BfMqq2DVyqdsAmtXNJH42l26WMI1i8sZ8%2FV%2Fy8IxZFwQn%2BWtB8QjC9QkVgTQjrhNkgQThddU9aQG%2FDDVn7PEBjqbAeLKtkgX6uIyBFStQHVv1K1xSGIEmB7zB7LiQU%2FO5bNhkSnakrF63BX%2F%2B1MlEwiyibxQstMvQneKo8k5Zen8WLIKY%2By7BHkTXG3BVzURQM2ZndJpnLjBorF%2FVmVYOTCeovfkCsx6ouElB0toGzYpWVDeDKOcckkcUW7vGLUU2%2BeM8l3SflPnfQPao941aXpgfcVn2NZ5iXnwP3sF&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250801T145818Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW54JSM3ULQ%2F20250801%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=61b299e8e379091951a9ccbebde3053605f4390eca90cf90ba0447b5b5426679 "Biểu đồ minh hoạ")
+![Biểu đồ dữ liệu](https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/754c42dacbe573dce951335e0bba71cd?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIGTjeXRYh9cwRUp%2F8M26XT2wrbKkeOKXRaP3KoKVqLZuAiEAkJGMjwGh1CYF012HwOrvlHRuJ4RIQaPUJFX2coAJ4DYqmQUI8P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3Mzk5MzkxNzM4MTkiDOmKfOK58nTZlUoT8CrtBG%2BJt6HP9L9NK%2BNY%2FoYy41L9LEawbffuZiyOJqu6AcSHjk0eAKy2x1liDeSUw4S0Rbv6yFnVaVNB%2BuYwbjUOHPCyBZV0D0a9SrU5mQgNH5zJTovVs0GfOXycK1kxgSqqOaGJ0To6lElW200m1OIJ0zfRI0JIjKDe28gTdo58a5mWeS%2F7cFoOw6BFHhGshQ4Zgo%2BA5mSPwEy%2BX8eQ2e5ZFX%2F27JFkvttvZCQeUly5pHN2TqgC8swqep61RVtBqabd4xBFYqCJlRaKTACf3I%2BA20TCMmix4wcbwX5ftoASshYig6LFJRdmDcY8pG%2B4wyOPIsu8CkqY1Q1XSJnwE3Y9sK4Sj6oQGg5ChtYJacRYbfX643Ar8P0h5KCG8TqYQ%2B0SIGXtCaVrnK7fL6iJUXJI1aPHNewMn1eLdAUTaaunH%2FnSGP36Kg2fKkCttRvJ4WDbtBCV5ept3UWthVOOtAnxsvgPXrM6gzsp%2B9mT5irz75lPFi27%2FHWtSTHhUJjvVa85mnrLuYzeBvxWh6L4lhxCSZ051hm08UkFLXMTsvCI0OU5NvTqLSg0v%2FdHs7B%2BGT%2Fw1uYfswDzZQnLFX4EGkf9mg7MlIyVicJcT5X1XaEKuoEC%2BWk1V1%2FB%2FXkxwo10Xmq%2B8B901JuLss%2FjAFEqsqcukZdKeh25VrzoOUpYkoaoFeup5r1inSTRG7AFF4dIvrU%2F%2BS6NCeLZ4kNyjpWw5CXMwMbDfaRACkQoawSJOUk8zgxOEGHMiIWoHLu%2FtBwZOlFWQyvfUqR4Ol8Junt58ilbFW2TQ86v7HtDLcXltxJN00fitMc5Sec8aXu5CmA67DDmm7PEBjqbAVb1nhxcNfKUgV7Zroytg6FoAvUZwq%2BlVBeQIHnZSAIk%2BkAoAYL4fJ61E%2FHdvqLm%2FlVnfTt9xVm6s5vywL8vsOhNQEq3RtaoOq1gDgNV79rzPi3FVWFzhHQ19Aq8ZxHK8MuTWyuzCYGJRVDJt9sibKqL8g8Jq2NAUQ9CXaWXOZBgoWLGfkjRUeu6akB%2BxAREABTtAd6JZ8sYNbP2&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250801T145820Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW5SZCCO522%2F20250801%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=b7f28b48ef49b433540920b90d63e366a6516b99daa0c125ca49fb92cc8a8b3d "Biểu đồ minh hoạ")
+![Biểu đồ dữ liệu](https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/2a8a6547acf07fe34ae41c4e57af65bf?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIGTjeXRYh9cwRUp%2F8M26XT2wrbKkeOKXRaP3KoKVqLZuAiEAkJGMjwGh1CYF012HwOrvlHRuJ4RIQaPUJFX2coAJ4DYqmQUI8P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3Mzk5MzkxNzM4MTkiDOmKfOK58nTZlUoT8CrtBG%2BJt6HP9L9NK%2BNY%2FoYy41L9LEawbffuZiyOJqu6AcSHjk0eAKy2x1liDeSUw4S0Rbv6yFnVaVNB%2BuYwbjUOHPCyBZV0D0a9SrU5mQgNH5zJTovVs0GfOXycK1kxgSqqOaGJ0To6lElW200m1OIJ0zfRI0JIjKDe28gTdo58a5mWeS%2F7cFoOw6BFHhGshQ4Zgo%2BA5mSPwEy%2BX8eQ2e5ZFX%2F27JFkvttvZCQeUly5pHN2TqgC8swqep61RVtBqabd4xBFYqCJlRaKTACf3I%2BA20TCMmix4wcbwX5ftoASshYig6LFJRdmDcY8pG%2B4wyOPIsu8CkqY1Q1XSJnwE3Y9sK4Sj6oQGg5ChtYJacRYbfX643Ar8P0h5KCG8TqYQ%2B0SIGXtCaVrnK7fL6iJUXJI1aPHNewMn1eLdAUTaaunH%2FnSGP36Kg2fKkCttRvJ4WDbtBCV5ept3UWthVOOtAnxsvgPXrM6gzsp%2B9mT5irz75lPFi27%2FHWtSTHhUJjvVa85mnrLuYzeBvxWh6L4lhxCSZ051hm08UkFLXMTsvCI0OU5NvTqLSg0v%2FdHs7B%2BGT%2Fw1uYfswDzZQnLFX4EGkf9mg7MlIyVicJcT5X1XaEKuoEC%2BWk1V1%2FB%2FXkxwo10Xmq%2B8B901JuLss%2FjAFEqsqcukZdKeh25VrzoOUpYkoaoFeup5r1inSTRG7AFF4dIvrU%2F%2BS6NCeLZ4kNyjpWw5CXMwMbDfaRACkQoawSJOUk8zgxOEGHMiIWoHLu%2FtBwZOlFWQyvfUqR4Ol8Junt58ilbFW2TQ86v7HtDLcXltxJN00fitMc5Sec8aXu5CmA67DDmm7PEBjqbAVb1nhxcNfKUgV7Zroytg6FoAvUZwq%2BlVBeQIHnZSAIk%2BkAoAYL4fJ61E%2FHdvqLm%2FlVnfTt9xVm6s5vywL8vsOhNQEq3RtaoOq1gDgNV79rzPi3FVWFzhHQ19Aq8ZxHK8MuTWyuzCYGJRVDJt9sibKqL8g8Jq2NAUQ9CXaWXOZBgoWLGfkjRUeu6akB%2BxAREABTtAd6JZ8sYNbP2&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250801T145824Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW5SZCCO522%2F20250801%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=44cdebe0e9eef378c116e18822b351143ce95b220b8317438dde62c367a2b6e8 "Biểu đồ minh hoạ")
